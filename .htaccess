@@ -1,0 +1,4 @@
+RewriteEngine on
+RewriteBase /apier/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule . index.php [L]

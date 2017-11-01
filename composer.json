@@ -1,0 +1,20 @@
+{
+    "name": "make/api",
+    "description": "package that make the api in easy way.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Khalid Mohammad",
+            "email": "prog.khalid.mohammad@gmal.com"
+        }
+    ],
+    "minimum-stability": "beta",
+    "require": {
+        "usmanhalalit/pixie": "2.*@dev",
+        "phroute/phroute": "^2.1",
+        "phpmailer/phpmailer": "~6.0",
+        "rakit/validation": "^0.13.1",
+        "nesbot/carbon": "^1.22"
+    }
+}

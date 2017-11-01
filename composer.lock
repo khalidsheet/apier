@@ -1,0 +1,451 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "d91fd76ef8474c0ab4505a1a0a9c7b00",
+    "packages": [
+        {
+            "name": "nesbot/carbon",
+            "version": "1.22.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/briannesbitt/Carbon.git",
+                "reference": "7cdf42c0b1cc763ab7e4c33c47a24e27c66bfccc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/7cdf42c0b1cc763ab7e4c33c47a24e27c66bfccc",
+                "reference": "7cdf42c0b1cc763ab7e4c33c47a24e27c66bfccc",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "symfony/translation": "~2.6 || ~3.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "~2",
+                "phpunit/phpunit": "~4.0 || ~5.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.23-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Carbon\\": "src/Carbon/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Brian Nesbitt",
+                    "email": "brian@nesbot.com",
+                    "homepage": "http://nesbot.com"
+                }
+            ],
+            "description": "A simple API extension for DateTime.",
+            "homepage": "http://carbon.nesbot.com",
+            "keywords": [
+                "date",
+                "datetime",
+                "time"
+            ],
+            "time": "2017-01-16T07:55:07+00:00"
+        },
+        {
+            "name": "phpmailer/phpmailer",
+            "version": "v6.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PHPMailer/PHPMailer.git",
+                "reference": "992392437c2e2784e0dc41446024fe411d293c96"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/992392437c2e2784e0dc41446024fe411d293c96",
+                "reference": "992392437c2e2784e0dc41446024fe411d293c96",
+                "shasum": ""
+            },
+            "require": {
+                "ext-ctype": "*",
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "doctrine/annotations": "1.2.*",
+                "friendsofphp/php-cs-fixer": "^2.2",
+                "phpdocumentor/phpdocumentor": "2.*",
+                "phpunit/phpunit": "^4.8 || ^5.7",
+                "zendframework/zend-eventmanager": "3.0.*",
+                "zendframework/zend-i18n": "2.7.3",
+                "zendframework/zend-serializer": "2.7.*"
+            },
+            "suggest": {
+                "ext-mbstring": "Needed to send email in multibyte encoding charset",
+                "hayageek/oauth2-yahoo": "Needed for Yahoo XOAUTH2 authentication",
+                "league/oauth2-google": "Needed for Google XOAUTH2 authentication",
+                "psr/log": "For optional PSR-3 debug logging",
+                "stevenmaguire/oauth2-microsoft": "Needed for Microsoft XOAUTH2 authentication",
+                "symfony/polyfill-mbstring": "To support UTF-8 if the Mbstring PHP extension is not enabled (^1.2)"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PHPMailer\\PHPMailer\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-2.1"
+            ],
+            "authors": [
+                {
+                    "name": "Jim Jagielski",
+                    "email": "jimjag@gmail.com"
+                },
+                {
+                    "name": "Marcus Bointon",
+                    "email": "phpmailer@synchromedia.co.uk"
+                },
+                {
+                    "name": "Andy Prevost",
+                    "email": "codeworxtech@users.sourceforge.net"
+                },
+                {
+                    "name": "Brent R. Matzelle"
+                }
+            ],
+            "description": "PHPMailer is a full-featured email creation and transfer class for PHP",
+            "time": "2017-09-14T16:47:12+00:00"
+        },
+        {
+            "name": "phroute/phroute",
+            "version": "v2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mrjgreen/phroute.git",
+                "reference": "dbe2b986f9ee1dd33dc956fcc35d1fa22e8e196c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mrjgreen/phroute/zipball/dbe2b986f9ee1dd33dc956fcc35d1fa22e8e196c",
+                "reference": "dbe2b986f9ee1dd33dc956fcc35d1fa22e8e196c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "*",
+                "satooshi/php-coveralls": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Phroute\\Phroute\\": "src/Phroute"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Joe Green",
+                    "email": "joe.green.0991@gmail.com"
+                }
+            ],
+            "description": "Fast, fully featured restful request router for PHP",
+            "keywords": [
+                "router",
+                "routing"
+            ],
+            "time": "2015-07-22T20:46:43+00:00"
+        },
+        {
+            "name": "rakit/validation",
+            "version": "v0.13.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rakit/validation.git",
+                "reference": "218c8047f299a3d8f6458a10bce7df3532597be4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rakit/validation/zipball/218c8047f299a3d8f6458a10bce7df3532597be4",
+                "reference": "218c8047f299a3d8f6458a10bce7df3532597be4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Rakit\\Validation\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Muhammad Syifa",
+                    "email": "emsifa@gmail.com"
+                }
+            ],
+            "description": "PHP Laravel like standalone validation library",
+            "time": "2017-10-18T12:57:53+00:00"
+        },
+        {
+            "name": "symfony/polyfill-mbstring",
+            "version": "v1.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-mbstring.git",
+                "reference": "2ec8b39c38cb16674bbf3fea2b6ce5bf117e1296"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/2ec8b39c38cb16674bbf3fea2b6ce5bf117e1296",
+                "reference": "2ec8b39c38cb16674bbf3fea2b6ce5bf117e1296",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "suggest": {
+                "ext-mbstring": "For best performance"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.6-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Mbstring\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill for the Mbstring extension",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "mbstring",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "time": "2017-10-11T12:05:26+00:00"
+        },
+        {
+            "name": "symfony/translation",
+            "version": "v3.4.0-BETA2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/translation.git",
+                "reference": "e7bfada027b7c17e973c80f5f789f91f896e42f8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/translation/zipball/e7bfada027b7c17e973c80f5f789f91f896e42f8",
+                "reference": "e7bfada027b7c17e973c80f5f789f91f896e42f8",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.5.9|>=7.0.8",
+                "symfony/polyfill-mbstring": "~1.0"
+            },
+            "conflict": {
+                "symfony/config": "<2.8",
+                "symfony/dependency-injection": "<3.4",
+                "symfony/yaml": "<3.4"
+            },
+            "require-dev": {
+                "psr/log": "~1.0",
+                "symfony/config": "~2.8|~3.0|~4.0",
+                "symfony/dependency-injection": "~3.4|~4.0",
+                "symfony/finder": "~2.8|~3.0|~4.0",
+                "symfony/intl": "^2.8.18|^3.2.5|~4.0",
+                "symfony/yaml": "~3.4|~4.0"
+            },
+            "suggest": {
+                "psr/log": "To use logging capability in translator",
+                "symfony/config": "",
+                "symfony/yaml": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Translation\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Translation Component",
+            "homepage": "https://symfony.com",
+            "time": "2017-10-24T14:12:06+00:00"
+        },
+        {
+            "name": "usmanhalalit/pixie",
+            "version": "2.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/usmanhalalit/pixie.git",
+                "reference": "648090e2d967a4a4de6c78bc465790217785facb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/usmanhalalit/pixie/zipball/648090e2d967a4a4de6c78bc465790217785facb",
+                "reference": "648090e2d967a4a4de6c78bc465790217785facb",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0",
+                "usmanhalalit/viocon": "1.0.*@dev"
+            },
+            "require-dev": {
+                "mockery/mockery": "0.9.4",
+                "phpunit/phpunit": "^4.8"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Pixie": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Muhammad Usman",
+                    "email": "hi@usman.it",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Pavel Puchkin",
+                    "email": "i@neoascetic.me",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A lightweight, expressive, framework agnostic query builder for PHP.",
+            "homepage": "https://github.com/usmanhalalit/pixie",
+            "keywords": [
+                "database",
+                "mysql",
+                "postgresql",
+                "query builder",
+                "sql",
+                "sqlite"
+            ],
+            "time": "2017-10-17 07:17:04"
+        },
+        {
+            "name": "usmanhalalit/viocon",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/usmanhalalit/viocon.git",
+                "reference": "0878afee16f15355971fb95bf3c6d297aceff35d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/usmanhalalit/viocon/zipball/0878afee16f15355971fb95bf3c6d297aceff35d",
+                "reference": "0878afee16f15355971fb95bf3c6d297aceff35d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Viocon": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Muhammad Usman",
+                    "email": "hi@usman.it",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A simple and flexible Dependency Injection container for PHP.",
+            "homepage": "https://github.com/usmanhalalit/viocon",
+            "keywords": [
+                "container",
+                "di",
+                "ioc",
+                "test"
+            ],
+            "time": "2013-07-13T19:54:56+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "beta",
+    "stability-flags": {
+        "usmanhalalit/pixie": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
