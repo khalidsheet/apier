@@ -1,28 +1,43 @@
 <?php 
 
+/*==========================================================
+ *                                                         *
+ *             This is the demo Controller                 *
+ *              You Can find all what you                  *
+ *               Need in this contoller                    *
+ *                                                         *
+ *                                                         *
+ *                                                         *
+ *                                                         *
+ *========================================================*/
+
 namespace App\Controllers;
 
 use App\Controller as BaseController;
-use KAD;
+use KAD; // the Query Builder
 use Rakit\Validation\Validator;
 use Carbon\Carbon;
+
+use App\Http\Requester;
 
 class HomeController extends BaseController
 {
 	public function getAll()
 	{
-		$time = Carbon::createFromDate(2012, 1, 1, 'Asia/Baghdad');
-		return $time->diffForHumen();
 
-		$users = KAD::table('users')->paginate(10);
+		$users = KAD::table('users')->limit(10)->get();
 		return $this->toJson($users);
 	}
 
 	public function getOneUser($name)
 	{
-		$this->request($_POST);
+		// first of all store all the request in public request var
+		$request = new Requester;
 
+		// start the validation;
 		$validation = new Validator;
+
+
 		$validator = $validation->validate($this->request, [
 			'id' => 'required'
 		]);
@@ -31,7 +46,20 @@ class HomeController extends BaseController
 			return $this->toJson($validator->errors()->all());
 
 
+
+
 		return $this->toJson($this->request);
+	}
+
+
+	public function testReq()
+	{
+		// make a new instance of this requester
+		$request = new Requester;
+
+		return $this->toJson($request->ip);
+
+
 	}
 
 }

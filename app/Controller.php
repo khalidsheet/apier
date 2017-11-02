@@ -2,42 +2,31 @@
 
 namespace App;
 
+//use \Mobile_Detect;
+
 class Controller
 {
+
+
+	// store all request body here
 	public $request = []; 
+
+
+
+
+
+
 
 	public function toJson($data)
 	{
 		return json_encode($data, true);
 	}
 
-	public function validator(array $inputs)
+	public function toArray($data)
 	{
-		$errors = [];
-
-		foreach ($inputs as $key => $value) {
-			if ($value == 'required') {
-				$errors[] = $this->RequiredValidator($value, $key);
-			}
-			
-		}
-
-		return $errors;
+		return json_decode($data, true);
 	}
 
-	private function RequiredValidator(string $value, string $keyName)
-	{
-		if ($value == '' && empty($value) && !isset($value) ) {
-			return $keyName . ' input is required!';
-		}
-	}
-
-	public function request($postREQ)
-	{
-		foreach($postREQ as $key => $value) {
-			$this->request[$key] = $value;
-		}
-	}
 }
 
  ?>
