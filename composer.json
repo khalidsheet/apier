@@ -9,7 +9,7 @@
             "email": "prog.khalid.mohammad@gmal.com"
         }
     ],
-    "minimum-stability": "beta",
+    "minimum-stability": "stable",
     "require": {
         "usmanhalalit/pixie": "2.*@dev",
         "phroute/phroute": "^2.1",
