@@ -1,15 +1,15 @@
 {
-    "name": "make/api",
+    "name": "prog98rammer/apier",
     "description": "package that make the api in easy way.",
-    "type": "library",
+    "type": "project",
     "license": "MIT",
     "authors": [
         {
             "name": "Khalid Mohammad",
-            "email": "prog.khalid.mohammad@gmal.com"
+            "email": "prog.khalid.mohammad@gmail.com"
         }
     ],
-    "minimum-stability": "stable",
+    "minimum-stability":"stable",
     "require": {
         "usmanhalalit/pixie": "2.*@dev",
         "phroute/phroute": "^2.1",

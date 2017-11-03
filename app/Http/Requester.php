@@ -25,10 +25,13 @@ class Requester
 
 	function __construct()
 	{
-		foreach ($_REQUEST as $key => $value) {
+		$REQ = $this->isGetMethod() ? $_GET : $_POST;
+		foreach ($REQ as $key => $value) {
+
 			$this->request[$key] = $value;
 
 			$this->$key = $value;
+			
 		}
 
 		$this->ip         = $_SERVER['REMOTE_ADDR'];
@@ -45,20 +48,20 @@ class Requester
 		return $this->request;
 	}
 
-	public function only(array $param)
+	public function only(array $params)
 	{
-		if (is_array($param)) {
-			foreach ($param as $key) {
-				@$this->onlyThisRequest[$key] = $this->request[$key];
+		if (is_array($params)) {
+			foreach ($params as $param) {
+				@$this->onlyThisRequest[$param] = $this->request[$param];
 			}
 		}
 
 		return $this->onlyThisRequest;	
 	}
 
-	public function get($request)
+	public function get($param)
 	{
-		return $this->request[$request];
+		return $this->request[$param];
 	}
 
 	public function method()

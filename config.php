@@ -21,3 +21,19 @@ $config = array(
     'collation' => 'utf8_unicode_ci', // Optional
     'prefix'    => '', // Table prefix, optional
 );
+
+
+$mailConfig = [
+    'host' => 'smtp.gmail.com',
+    'username' => 'test@mail.com',
+    'password' => 'secret',
+    'SMTPSecure' => 'tls',
+    'port' => 587,
+
+    // Set From E-mail
+    'your_email' => 'fromEmail@gmail.com',
+
+    // Leave it empty if you want to show email address
+    'alias_name' => 'Test'
+];
+

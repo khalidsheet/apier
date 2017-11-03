@@ -1,9 +1,12 @@
 <?php
 
-require_once 'vendor/autoload.php';
-require 'config.php';
+error_reporting(E_ALL); 
+ini_set('display_errors', 1);
+
+require_once __DIR__ .'/vendor/autoload.php';
+
+include 'config.php';
 
 new \Pixie\Connection('mysql', $config, 'KAD');
 
-require 'app/init.php';
-
+include __DIR__ . '/app/init.php';
