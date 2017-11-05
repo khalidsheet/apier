@@ -25,8 +25,8 @@ $config = array(
 
 $mailConfig = [
     'host' => 'smtp.gmail.com',
-    'username' => 'test@mail.com',
-    'password' => 'secret',
+    'username' => 'prog.khalid.mohammad@gmail.com',
+    'password' => 'KYloveAM#Y@M98',
     'SMTPSecure' => 'tls',
     'port' => 587,
 
@@ -36,4 +36,6 @@ $mailConfig = [
     // Leave it empty if you want to show email address
     'alias_name' => 'Test'
 ];
+
+
 

@@ -10,27 +10,27 @@ class Controller
 {
 
 	public $mail;
-	public $config = [];
+	public static $config = [];
 
 	function __construct() {
 		$this->mail = new PHPMailer();
 
         //$mail->SMTPDebug = 2;                                 // Enable verbose debug output
 		$this->mail->isSMTP();                                      // Set mailer to use SMTP
-		$this->mail->Host = $this->config['host'];  // Specify main and backup SMTP servers
+		$this->mail->Host = static::$config['host'];  // Specify main and backup SMTP servers
 		$this->mail->SMTPAuth = true;                               // Enable SMTP authentication
-		$this->mail->Username = $this->config['username'];               // SMTP username
-		$this->mail->Password = $this->config['password'];                           // SMTP password
-		$this->mail->SMTPSecure = $this->config['SMTPSecure'];                            // Enable TLS encryption, `ssl` also accepted
-		$this->mail->Port = $this->config['port'];                                    // TCP port to connect to Recipients
-		$this->mail->setFrom($this->config['your_email'], $this->config['alias_name']);
+		$this->mail->Username = static::$config['username'];               // SMTP username
+		$this->mail->Password = static::$config['password'];                           // SMTP password
+		$this->mail->SMTPSecure = static::$config['SMTPSecure'];                            // Enable TLS encryption, `ssl` also accepted
+		$this->mail->Port = static::$config['port'];                                    // TCP port to connect to Recipients
+		$this->mail->setFrom(static::$config['your_email'], static::$config['alias_name']);
 
 	}
 
-	public function setMailConfig($array)
+	public static function setMailConfig($array)
 	{
 		foreach ($array as $key => $value) {
-			$this->config[$key] = $value;
+			static::$config[$key] = $value;
 		}
 	}
 

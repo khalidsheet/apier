@@ -27,8 +27,7 @@
 		require $controller;
 	}
 
-	$c = new Controller;
-	$c->setMailConfig($mailConfig);
+	Controller::setMailConfig($mailConfig);
 	
 	// for routing system
 	$route = new RouteCollector();

@@ -9,6 +9,11 @@
 
 <p> - Then move the <b>Apier Framework</b> folder to your <b>Localhost path</b>.</p>
 <p>- Open the project in your code editor</p>
+<<<<<<< HEAD
+=======
+<p> - Then do : </p>
+*composer update*
+>>>>>>> f92a7e0b11b56207a1bb6b7749ae339f483cb344
 
 ----------------
 

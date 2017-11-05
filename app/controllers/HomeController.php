@@ -54,11 +54,7 @@ class HomeController extends BaseController
 
 	public function test()
 	{
-		// make a new instance of this requester
-		$request = new Requester;
-
-		return $this->toJson($request->all());
-
+		echo '<pre>' . print_r($_SERVER) . '</pre>';
 
 	}
 

@@ -45,5 +45,26 @@ class MailController extends BaseController
         }
     }
 
+    public function testMail()
+    {
+       $html = getMailContent('thanksForRegisteration');
+
+        try {
+            $this->mail->addAddress('prog.khalid.mohammad@gmail.com', 'Khalid');     // Add a recipient
+
+            //Content
+            $this->mail->isHTML(true);       // Set email format to HTML
+            $this->mail->Subject = 'Here is the subject';
+            $this->mail->Body    = $html;
+            //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+
+            $this->mail->send();
+            echo 'Message has been sent';
+        } catch (Exception $e) {
+            echo 'Message could not be sent.';
+            echo 'Mailer Error: ' . $this->mail->ErrorInfo;
+        }
+    }
+
 
 }

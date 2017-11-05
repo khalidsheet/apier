@@ -71,6 +71,7 @@ class PluralizationRules
             case 'vi':
             case 'zh':
                 return 0;
+                break;
 
             case 'af':
             case 'bn':
