@@ -25,8 +25,8 @@ $config = array(
 
 $mailConfig = [
     'host' => 'smtp.gmail.com',
-    'username' => 'prog.khalid.mohammad@gmail.com',
-    'password' => 'KYloveAM#Y@M98',
+    'username' => 'test@yourname.com',
+    'password' => 'secret',
     'SMTPSecure' => 'tls',
     'port' => 587,
 
