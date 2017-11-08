@@ -65,7 +65,8 @@ class MailController extends BaseController
                 'status' => 'Success',
                 'message' => 'Mail has been sent successfully',
                 'status_code' => 200
-            ])
+            ]);
+            
         } catch (Exception $e) {
             echo 'Message could not be sent.';
             echo 'Mailer Error: ' . $this->mail->ErrorInfo;

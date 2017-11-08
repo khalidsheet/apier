@@ -7,7 +7,7 @@ function e($input) {
 
 
 function getMailContent($path, array $vars = null) {
-	
+
 	$mailPath = glob('mails/'. $path . '.php');
 	return file_get_contents($mailPath[0]);
 }
@@ -16,6 +16,11 @@ function getMailContent($path, array $vars = null) {
 function view($viewName)
 {
 	return file_get_contents(glob($viewName . '.*')[0]);
+}
+
+function errorException(array $data)
+{
+	return json_encode($data);
 }
 
 

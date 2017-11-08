@@ -27,6 +27,7 @@
 		require $controller;
 	}
 
+	// set default mail configuration.
 	Controller::setMailConfig($mailConfig);
 	
 	// for routing system
@@ -34,7 +35,16 @@
 	include './routes/api.php';
 
 
+	try {
 
-	$dispatcher = new Dispatcher($route->getData());
-	echo $dispatcher->dispatch($_SERVER['REQUEST_METHOD'], parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
+		$dispatcher = new Dispatcher($route->getData());
+		echo $dispatcher->dispatch($_SERVER['REQUEST_METHOD'], parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));	
+
+	} catch (Phroute\Phroute\Exception\HttpMethodNotAllowedException $e) {
+		echo errorException([
+			'status' => 'error',
+			'message' => 'Method not allows.',
+			'method' => $e->getMessage()
+		]);
+	}
  ?>
