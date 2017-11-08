@@ -4,4 +4,4 @@
 ---------------
 
 # Go To our webiste to see the documentation 
-## [Apier](http://apeir.khalid.pro)
+## [Apier](http://apier.khalid.pro)
