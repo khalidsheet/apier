@@ -60,7 +60,12 @@ class MailController extends BaseController
             //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
             $this->mail->send();
-            echo 'Message has been sent';
+            
+            return $this->toJson([
+                'status' => 'Success',
+                'message' => 'Mail has been sent successfully',
+                'status_code' => 200
+            ])
         } catch (Exception $e) {
             echo 'Message could not be sent.';
             echo 'Mailer Error: ' . $this->mail->ErrorInfo;
