@@ -47,6 +47,7 @@ class MailController extends BaseController
 
     public function testMail()
     {
+        // this mail will send a html view page.
        $html = getMailContent('thanksForRegisteration');
 
         try {

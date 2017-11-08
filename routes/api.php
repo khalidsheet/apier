@@ -14,6 +14,10 @@ $route->get('/apier', function() {
 	return view('guide');
 });	
 
+	$route->get('apier/compact', function(){
+		$d = ['dddd', 'ssasd', 'sdsd', 'sd', 'sd'];
+		echo getMailContent('thanksForRegisteration', compact('d'));
+	});
 
 $route->group(['prefix' => 'apier/api'], function($route) {
 	$route->get('/users/all', ['App\Controllers\HomeController', 'getAll']);
@@ -23,6 +27,8 @@ $route->group(['prefix' => 'apier/api'], function($route) {
 
 	$route->get('mail', ['App\Controllers\MailController', 'index']);
 	$route->get('test_mail', ['App\Controllers\MailController', 'testMail']);
+
+
 });
 
 

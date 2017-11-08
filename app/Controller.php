@@ -27,7 +27,7 @@ class Controller
 
 	}
 
-	public static function setMailConfig($array)
+	public static function setMailConfig(array $array)
 	{
 		foreach ($array as $key => $value) {
 			static::$config[$key] = $value;

@@ -6,7 +6,8 @@ function e($input) {
 }
 
 
-function getMailContent($path) {
+function getMailContent($path, array $vars = null) {
+	
 	$mailPath = glob('mails/'. $path . '.php');
 	return file_get_contents($mailPath[0]);
 }
