@@ -3,15 +3,38 @@
 	require './vendor/phpmailer/phpmailer/src/PHPMailer.php';
 	require './vendor/phpmailer/phpmailer/src/SMTP.php';
 	require 'Http/Requester.php';
+	include 'template_engine_filter.php';
+	include 'filtersKernel.php';
 
 	// Routing System
 	use Phroute\Phroute\RouteCollector;
 	use Phroute\Phroute\Dispatcher;
 	use App\Controller;
 
+	$whoops = new \Whoops\Run;
+	$whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
+	$whoops->register();
 
 	$inAppFolder = glob('app/*.php');
 	$controllers = glob('app/controllers/*.php');
+
+
+	foreach ($filters as $filter) {
+		$twig->addFilter($$filter);
+	}
+
+	// set default TWIG settings
+	$lexer = new Twig_Lexer($twig, array(
+    	'tag_comment'   => array('{#', '#}'),
+    	'tag_block'     => array('{@', '@}'),
+    	'tag_variable'  => array('{{', '}}'),
+    	'interpolation' => array('#{', '}'),
+	));
+
+	$twig->setLexer($lexer);
+
+
+
 
 
 
@@ -28,23 +51,14 @@
 	}
 
 	// set default mail configuration.
-	Controller::setMailConfig($mailConfig);
+	Controller::setMailConfig($appConfig['mail']);
 	
 	// for routing system
 	$route = new RouteCollector();
 	include './routes/api.php';
 
 
-	try {
+	$dispatcher = new Dispatcher($route->getData());
+	echo $dispatcher->dispatch($_SERVER['REQUEST_METHOD'], parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));	
 
-		$dispatcher = new Dispatcher($route->getData());
-		echo $dispatcher->dispatch($_SERVER['REQUEST_METHOD'], parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));	
-
-	} catch (Phroute\Phroute\Exception\HttpMethodNotAllowedException $e) {
-		echo errorException([
-			'status' => 'error',
-			'message' => 'Method not allows.',
-			'method' => $e->getMessage()
-		]);
-	}
  ?>

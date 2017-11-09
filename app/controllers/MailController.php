@@ -47,8 +47,16 @@ class MailController extends BaseController
 
     public function testMail()
     {
-        // this mail will send a html view page.
-       $html = getMailContent('thanksForRegisteration');
+        // dummy data
+        $data = [
+            'name' => 'khalid',
+            'email' => 'test2@email.com'
+        ];
+
+        // this mail will render a view with variables you sent.
+       $html = getMailContent('thanksForRegisteration', compact('data'));
+
+       return $html;
 
         try {
             $this->mail->addAddress('prog.khalid.mohammad@gmail.com', 'Khalid');     // Add a recipient

@@ -1,20 +1,23 @@
 {
     "name": "prog98rammer/apier",
-    "description": "package that make the api in easy way.",
+    "description": "Framework, let you to build APIs in easy way",
     "type": "project",
     "license": "MIT",
     "authors": [
         {
             "name": "Khalid Mohammad",
-            "email": "prog.khalid.mohammad@gmail.com"
+            "email": "prog.khalid.mohammad@gmail.com",
+            "homepage": "http://khalid.pro"
         }
     ],
-    "minimum-stability":"dev",
     "require": {
         "usmanhalalit/pixie": "2.*@dev",
         "phroute/phroute": "^2.1",
         "phpmailer/phpmailer": "~6.0",
         "rakit/validation": "^0.13.1",
-        "nesbot/carbon": "^1.22"
+        "nesbot/carbon": "^1.22",
+        "guzzlehttp/guzzle": "^6.2@dev",
+        "twig/twig": "~2.0",
+        "filp/whoops": "^2.0@dev"
     }
 }

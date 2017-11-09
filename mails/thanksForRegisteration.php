@@ -5,17 +5,14 @@
 	<title>HI</title>
 </head>
 <body>
-	<h1>Hello</h1>
-	<p>this is a ul > li</p>
-	<ul>
-		<li>1</li>
-		<li>2</li>
-		<li>3</li>
-		<li>4</li>
-		<li>5</li>
-	</ul>
+	<h1>Hello, {{ data['name']|upper }}</h1>
+
 	<div class="mails-test">
-		<p style="background: #444; color:#fff; padding: 10px; border-radius: 13em; border: 3px solid #e5e5e5">this is styled p tag!</p>
+		<p style="background: #444; color:#fff; padding: 10px; border: 3px solid #e5e5e5">
+			Your E-mail ({{ data['email'] }}) has been locked ! <br>
+			Please contact us for more information. <br>
+			App team .
+		</p>
 	</div>
 </body>
 </html>

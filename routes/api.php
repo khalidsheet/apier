@@ -9,12 +9,12 @@
 
 
 // this is our Guide to the framework with love <3 
-$route->get('/apier', function() {
+$route->get('/apier-v2', function() {
 	return view('guide');
 });	
 
 
-$route->group(['prefix' => 'apier/api'], function($route) {
+$route->group(['prefix' => 'apier-v2/api'], function($route) {
 	$route->post('/users/all', ['App\Controllers\HomeController', 'getAll']);
 	$route->post('/users/{name}', ['App\Controllers\HomeController', 'getOneUser']);
 
