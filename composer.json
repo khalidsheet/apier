@@ -9,12 +9,14 @@
             "email": "prog.khalid.mohammad@gmail.com"
         }
     ],
-    "minimum-stability":"stable",
     "require": {
         "usmanhalalit/pixie": "2.*@dev",
         "phroute/phroute": "^2.1",
         "phpmailer/phpmailer": "~6.0",
         "rakit/validation": "^0.13.1",
-        "nesbot/carbon": "^1.22"
+        "nesbot/carbon": "^1.22",
+        "filp/whoops": "2.*",
+        "twig/twig": "2.*",
+        "guzzlehttp/guzzle": "^6.3"
     }
 }

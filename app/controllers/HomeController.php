@@ -54,11 +54,16 @@ class HomeController extends BaseController
 
 	public function test()
 	{
-		// make a new instance of this requester
-		$request = new Requester;
+		$data = [
+			'name' => 'khalid',
+			'email' => 'sss'
+		];
 
-		return $this->toJson($request->all());
+		$names = [
+			'ali', 'ahmed', 'khalid', 'ayat', 'hussien', 'sabaa'
+		];
 
+		echo getMailContent('hello', compact('data', 'names'));
 
 	}
 

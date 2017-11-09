@@ -11,7 +11,7 @@ $db = [
 ];
 
 
-$config = array(
+$config = [
     'driver'    => 'mysql', // Db driver
     'host'      => $db['mysql']['HOST'],
     'database'  => $db['mysql']['NAME'],
@@ -20,20 +20,22 @@ $config = array(
     'charset'   => 'utf8', // Optional
     'collation' => 'utf8_unicode_ci', // Optional
     'prefix'    => '', // Table prefix, optional
-);
+];
 
 
 $mailConfig = [
-    'host' => 'smtp.gmail.com',
-    'username' => 'test@mail.com',
-    'password' => 'secret',
+    'host'       => 'smtp.gmail.com',
+    'username'   => 'test@gmail.com',
+    'password'   => 'secret',
     'SMTPSecure' => 'tls',
-    'port' => 587,
+    'port'       => 587,
 
     // Set From E-mail
-    'your_email' => 'fromEmail@gmail.com',
+    'your_email' => 'test@gmail.com',
 
     // Leave it empty if you want to show email address
     'alias_name' => 'Test'
 ];
+
+
 

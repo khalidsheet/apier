@@ -1,5 +1,7 @@
 <?php
 
+
+
 error_reporting(E_ALL); 
 ini_set('display_errors', 1);
 
@@ -9,4 +11,10 @@ include 'config.php';
 
 new \Pixie\Connection('mysql', $config, 'KAD');
 
+$loader = new Twig_Loader_Filesystem('mails');
+$view = new Twig_Environment($loader);
+
 include __DIR__ . '/app/init.php';
+
+
+
